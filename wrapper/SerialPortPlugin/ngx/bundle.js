@@ -12,7 +12,7 @@ var SerialPortPlugin = /** @class */ (function (_super) {
     function SerialPortPlugin() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
-    SerialPortPlugin.prototype.init = function (name, baudrate) { return core.cordova(this, "init", { "observable": true }, arguments); };
+    SerialPortPlugin.prototype.open = function (name, baudrate) { return core.cordova(this, "open", { "observable": true }, arguments); };
     SerialPortPlugin.prototype.close = function (name) { return core.cordova(this, "close", {}, arguments); };
     SerialPortPlugin.prototype.send = function (name, data) { return core.cordova(this, "send", {}, arguments); };
     SerialPortPlugin.pluginName = "SerialPortPlugin";

@@ -20,7 +20,7 @@ export declare class SerialPortPlugin extends AwesomeCordovaNativePlugin {
      * @param {number} baudrate 波特率
      * @return {*} 可观察对象, 观察串口收到的数据
      */
-    init(name: string, baudrate: number): Observable<SerialPortResult>;
+    open(name: string, baudrate: number): Observable<SerialPortResult>;
     /**
     * @description: 关闭某个串口
     * @param {number} name 节点名称
