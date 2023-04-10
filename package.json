@@ -1,12 +1,17 @@
 {
-  "name": "native-plugin-serialPort",
+  "name": "native-plugin-serialport",
   "version": "1.0.0",
-  "description": "serialPort",
+  "description": "cordova serialPort",
+  "main": "www/native-plugin-serialPort.js",
   "cordova": {
     "id": "native-plugin-serialPort",
     "platforms": [
       "android"
     ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/x842013824/native-plugin-serialPort.git"
   },
   "keywords": [
     "serialPort:cordova",
