@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="native-plugin-serialPort" version="0.0.1"
+    xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>native-plugin-serialPort</name>
+    <js-module name="serialPort" src="www/native-plugin-serialPort.js">
+        <clobbers target="native.serialPort" />
+    </js-module>
+    <platform name="android">
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="serialPort">
+                <param name="android-package"
+                    value="com.plugins.serial.SerialPortPlugin" />
+            </feature>
+        </config-file>
+        <config-file parent="/*" target="AndroidManifest.xml"></config-file>
+        <source-file src="src/android/SerialPortPlugin.java" target-dir="src/com/plugins/serial" />
+        <source-file src="src/android/SerialPortInstance.java" target-dir="src/com/plugins/serial" />
+        <!-- SerialPort.java用到了so库, 必须得指定包名为android_serialport_api, 否则会出现native方法找不到的错误 -->
+        <source-file src="src/android/SerialPort.java" target-dir="src/android_serialport_api" />
+    </platform>
+</plugin>

@@ -1,0 +1,17 @@
+{
+  "name": "native-plugin-serialPort",
+  "version": "1.0.0",
+  "description": "serialPort",
+  "cordova": {
+    "id": "native-plugin-serialPort",
+    "platforms": [
+      "android"
+    ]
+  },
+  "keywords": [
+    "serialPort:cordova",
+    "cordova-android"
+  ],
+  "author": "kuku.xu",
+  "license": "ISC"
+}
